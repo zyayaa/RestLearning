@@ -19,5 +19,3 @@ D:\RestLearning\RestLearning\obj\Debug\RestLearning.Layouts.Main.xaml.g.cs
 D:\RestLearning\RestLearning\obj\Debug\RestLearning.dll
 D:\RestLearning\RestLearning\obj\Debug\RestLearning.pdb
 D:\RestLearning\RestLearning\obj\Debug\RestLearning.csprojResolveAssemblyReference.cache
-D:\RestLearning\RestLearning\obj\Debug\RestLearning.dll.mdb
-D:\RestLearning\RestLearning\bin\Debug\RestLearning.dll.mdb

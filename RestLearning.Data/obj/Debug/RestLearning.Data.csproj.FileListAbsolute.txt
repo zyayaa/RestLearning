@@ -1,0 +1,12 @@
+D:\RestLearning\RestLearning.Data\bin\Debug\RestLearning.Data.dll.config
+D:\RestLearning\RestLearning.Data\bin\Debug\RestLearning.Data.dll
+D:\RestLearning\RestLearning.Data\bin\Debug\RestLearning.Data.pdb
+D:\RestLearning\RestLearning.Data\bin\Debug\EntityFramework.dll
+D:\RestLearning\RestLearning.Data\bin\Debug\EntityFramework.SqlServer.dll
+D:\RestLearning\RestLearning.Data\bin\Debug\EntityFramework.xml
+D:\RestLearning\RestLearning.Data\bin\Debug\EntityFramework.SqlServer.xml
+D:\RestLearning\RestLearning.Data\obj\Debug\RestLearning.Data.csprojResolveAssemblyReference.cache
+D:\RestLearning\RestLearning.Data\obj\Debug\RestLearning.Data.dll
+D:\RestLearning\RestLearning.Data\obj\Debug\RestLearning.Data.pdb
+D:\RestLearning\RestLearning.Data\obj\Debug\RestLearning.Data.Migrations.dboUsers.resources
+D:\RestLearning\RestLearning.Data\obj\Debug\RestLearning.Data.csproj.GenerateResource.Cache
