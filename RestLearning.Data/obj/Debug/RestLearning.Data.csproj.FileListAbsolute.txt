@@ -10,3 +10,4 @@ D:\RestLearning\RestLearning.Data\obj\Debug\RestLearning.Data.dll
 D:\RestLearning\RestLearning.Data\obj\Debug\RestLearning.Data.pdb
 D:\RestLearning\RestLearning.Data\obj\Debug\RestLearning.Data.Migrations.dboUsers.resources
 D:\RestLearning\RestLearning.Data\obj\Debug\RestLearning.Data.csproj.GenerateResource.Cache
+D:\RestLearning\RestLearning.Data\obj\Debug\RestLearning.Data.Migrations.dboUser_AddedOn.resources

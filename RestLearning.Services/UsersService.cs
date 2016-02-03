@@ -31,6 +31,23 @@ namespace RestLearning.Services {
             }
         }
 
+        public static void CreateUser(UserDto user) {
+            using(var uow = new UnitOfWork()) {
+                var userDe = MapUserToDe(user);
+                uow.UsersRepository.Insert(userDe);
+                uow.Save();
+            }
+        }
+
+        private static Users MapUserToDe(UserDto user) {
+            return new Users {
+                UserID = user.UserId,
+                Name = user.Name,
+                Age= user.Age,
+                AddedOn = user.AddedOn                
+            };
+        }
+
         /// <summary>
         /// Return a single user
         /// </summary>
@@ -40,7 +57,8 @@ namespace RestLearning.Services {
             return new UserDto {
 				UserId = user.UserID,
                 Age = user.Age,
-                Name = user.Name
+                Name = user.Name,
+                AddedOn = user.AddedOn
             };
         }
 

@@ -25,5 +25,3 @@ D:\RestLearning\RestLearning\obj\Debug\RestLearning.dll.mdb
 D:\RestLearning\RestLearning\bin\Debug\RestLearning.dll.mdb
 D:\RestLearning\RestLearning\obj\Debug\RestLearning.dll.mdb
 D:\RestLearning\RestLearning\bin\Debug\RestLearning.dll.mdb
-D:\RestLearning\RestLearning\obj\Debug\RestLearning.dll.mdb
-D:\RestLearning\RestLearning\bin\Debug\RestLearning.dll.mdb

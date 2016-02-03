@@ -51,9 +51,14 @@
     <Compile Include="Migrations\201602021717251_dbo.Users.Designer.cs">
       <DependentUpon>201602021717251_dbo.Users.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201602031654350_dbo.User_AddedOn.cs" />
+    <Compile Include="Migrations\201602031654350_dbo.User_AddedOn.Designer.cs">
+      <DependentUpon>201602031654350_dbo.User_AddedOn.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Users.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\BaseRepository.cs" />
     <Compile Include="Repositories\UsersRepository.cs" />
     <Compile Include="UnitOfWork.cs" />
     <Compile Include="UsersContext.cs" />
@@ -65,6 +70,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201602021717251_dbo.Users.resx">
       <DependentUpon>201602021717251_dbo.Users.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201602031654350_dbo.User_AddedOn.resx">
+      <DependentUpon>201602031654350_dbo.User_AddedOn.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

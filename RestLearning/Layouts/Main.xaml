@@ -7,6 +7,11 @@
 
     <ListView VerticalOptions="CenterAndExpand" x:Name="UserList"/>
 
+    <Entry x:Name="txt_name" Placeholder = "Name"/>
+    <Entry x:Name="txt_age" Placeholder="Age" Keyboard="Numeric"/>
+
+    <Button x:Name="btn_add" Text="Add" HorizontalOptions="CenterAndExpand" WidthRequest="150"/>
+
   </StackLayout>
 
 </ContentPage>

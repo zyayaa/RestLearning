@@ -6,12 +6,10 @@ using System.Threading.Tasks;
 using RestLearning.Data.Models;
 
 namespace RestLearning.Data.Repositories {
-    public class UsersRepository {
+    public class UsersRepository : BaseRepository<Users> {
 
-        private readonly UsersContext context;
-
-        public UsersRepository(UsersContext context) {
-            this.context = context;
+        public UsersRepository(UsersContext context):base(context) {
+           
         }
 
         public Users GetUser(Guid userId) {
@@ -22,8 +20,8 @@ namespace RestLearning.Data.Repositories {
         }
 
         public List<Users> GetUsers() {
-
             return (from u in context.Users
+                    orderby u.AddedOn ascending
                     select u).ToList();
         }
     }

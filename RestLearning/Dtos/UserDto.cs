@@ -17,5 +17,8 @@ namespace RestLearning.Dtos {
 
         [DataMember(Name = "age")]
         public int Age { get; set; }
+
+		[DataMember(Name = "addedOn")]
+		public DateTime AddedOn{ get; set; }
     }
 }

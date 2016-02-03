@@ -21,13 +21,15 @@ namespace RestLearning.Data.Migrations
             context.Users.Add(new Users {
                 UserID = Guid.Parse("750EFA66-87CD-468E-A02B-065BB0612A04"),
                 Name = "Joao",
-                Age = 21
+                Age = 21,
+                AddedOn = DateTime.Now
             });
 
             context.Users.Add(new Users {
                 UserID = Guid.Parse("CA0987CD-D8FF-4398-8662-1CE251DE3ED0"),
                 Name = "Filipe",
-                Age = 22
+                Age = 22,
+                AddedOn = DateTime.Now
             });
         }
     }

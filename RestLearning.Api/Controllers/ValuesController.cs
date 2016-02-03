@@ -10,23 +10,30 @@ using RestLearning.Services;
 namespace RestLearning.Api.Controllers {
     public class ValuesController : ApiController {
 
-        // GET api/values
+        // GET values
+        [Route("values")]
         public List<UserDto> Get() {
             return UsersService.GetUsers();
         }
 
-        // GET api/values/5
+        // GET values/5
+        [Route("values/{id}")]
         public UserDto Get(string id) {
             Guid userId = Guid.Parse(id);
             return UsersService.GetUser(userId);
         }
 
-        // POST api/values
-        public void Post([FromBody]string value) {
+        [Route("values/new")]
+        // POST values
+        public void Post([FromBody]UserDto user) {
+            if(user != null) {
+                UsersService.CreateUser(user);
+            }
         }
 
-        // PUT api/values/5
-        public void Put(int id, [FromBody]string value) {
+        [Route("values/{id}")]
+        public void Put(string userId, [FromBody]UserDto user) {
+
         }
 
         // DELETE api/values/5
