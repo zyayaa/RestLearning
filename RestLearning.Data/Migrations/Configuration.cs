@@ -4,7 +4,7 @@ namespace RestLearning.Data.Migrations
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
     using System.Linq;
-
+    using Models;
     internal sealed class Configuration : DbMigrationsConfiguration<RestLearning.Data.UsersContext>
     {
         public Configuration()
@@ -17,6 +17,12 @@ namespace RestLearning.Data.Migrations
             context.Database.ExecuteSqlCommand("sp_MSForEachTable 'ALTER TABLE ? NOCHECK CONSTRAINT ALL'");
             context.Database.ExecuteSqlCommand("sp_MSForEachTable 'IF OBJECT_ID(''?'') NOT IN (ISNULL(OBJECT_ID(''[dbo].[__MigrationHistory]''),0)) DELETE FROM ?'");
             context.Database.ExecuteSqlCommand("EXEC sp_MSForEachTable 'ALTER TABLE ? CHECK CONSTRAINT ALL'");
+
+            context.Users.Add(new Users {
+                UserID = Guid.NewGuid(),
+                Name = "Joao",
+                Age = 21
+            });
         }
     }
 }

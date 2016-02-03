@@ -9,9 +9,9 @@ using RestLearning.Data.Models;
 namespace RestLearning.Data {
     public class UsersContext : DbContext {
 
-        public UsersContext() : base("RestLearning") {
+        public UsersContext() : base("Data Source=127.0.0.1;Database=RestLearning;Integrated Security=True;") {
         }
 
-        DbSet<Users> Users { get; set; }
+        public DbSet<Users> Users { get; set; }
     }
 }
