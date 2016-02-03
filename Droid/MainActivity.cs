@@ -1,5 +1,4 @@
 ﻿using System;
-
 using Android.App;
 using Android.Content;
 using Android.Content.PM;
@@ -7,6 +6,8 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
+using Xamarin.Forms;
+using Plugin.Toasts;
 
 namespace RestLearning.Droid
 {
@@ -20,6 +21,9 @@ namespace RestLearning.Droid
 			global::Xamarin.Forms.Forms.Init (this, bundle);
 
 			LoadApplication (new App ());
+
+			DependencyService.Register<ToastNotificatorImplementation>();
+            ToastNotificatorImplementation.Init(this);
 		}
 	}
 }

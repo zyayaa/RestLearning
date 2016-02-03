@@ -31,5 +31,12 @@ D:\RestLearning\Droid\obj\Debug\res\drawable-xhdpi\icon.png
 D:\RestLearning\Droid\obj\Debug\res\drawable-xxhdpi\icon.png
 D:\RestLearning\Droid\obj\Debug\R.cs.flag
 D:\RestLearning\Droid\obj\Debug\uploadflags.txt
+D:\RestLearning\Droid\bin\Debug\Toasts.Forms.Plugin.Abstractions.dll
+D:\RestLearning\Droid\bin\Debug\Toasts.Forms.Plugin.Droid.dll
+D:\RestLearning\Droid\bin\Debug\Toasts.Forms.Plugin.Abstractions.pdb
+D:\RestLearning\Droid\bin\Debug\Toasts.Forms.Plugin.Droid.pdb
+D:\RestLearning\Droid\bin\Debug\Toasts.Forms.Plugin.Abstractions.dll.mdb
+D:\RestLearning\Droid\bin\Debug\Toasts.Forms.Plugin.Droid.dll.mdb
+D:\RestLearning\Droid\bin\Debug\RestLearning.dll.mdb
 D:\RestLearning\Droid\obj\Debug\RestLearning.Droid.dll.mdb
 D:\RestLearning\Droid\bin\Debug\RestLearning.Droid.dll.mdb

@@ -38,6 +38,7 @@ namespace RestLearning.Services {
         /// <returns></returns>
         private static UserDto MapUsersToDto(Users user) {
             return new UserDto {
+				UserId = user.UserID,
                 Age = user.Age,
                 Name = user.Name
             };

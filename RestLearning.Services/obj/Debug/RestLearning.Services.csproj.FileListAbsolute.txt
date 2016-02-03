@@ -19,3 +19,5 @@ D:\RestLearning\RestLearning.Services\bin\Debug\Newtonsoft.Json.xml
 D:\RestLearning\RestLearning.Services\obj\Debug\RestLearning.Services.csprojResolveAssemblyReference.cache
 D:\RestLearning\RestLearning.Services\obj\Debug\RestLearning.Services.dll
 D:\RestLearning\RestLearning.Services\obj\Debug\RestLearning.Services.pdb
+D:\RestLearning\RestLearning.Services\bin\Debug\Toasts.Forms.Plugin.Abstractions.dll
+D:\RestLearning\RestLearning.Services\bin\Debug\Toasts.Forms.Plugin.Abstractions.pdb

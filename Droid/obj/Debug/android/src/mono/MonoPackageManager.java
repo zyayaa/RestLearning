@@ -82,6 +82,8 @@ class MonoPackageManager_Resources {
 		"RestLearning.Droid.dll",
 		"FormsViewGroup.dll",
 		"RestLearning.dll",
+		"Toasts.Forms.Plugin.Abstractions.dll",
+		"Toasts.Forms.Plugin.Droid.dll",
 		"Xamarin.Android.Support.Design.dll",
 		"Xamarin.Android.Support.v4.dll",
 		"Xamarin.Android.Support.v7.AppCompat.dll",

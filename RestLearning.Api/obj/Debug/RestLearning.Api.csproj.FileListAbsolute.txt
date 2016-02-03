@@ -70,3 +70,5 @@ D:\RestLearning\RestLearning.Api\bin\EntityFramework.dll
 D:\RestLearning\RestLearning.Api\bin\RestLearning.Services.pdb
 D:\RestLearning\RestLearning.Api\bin\RestLearning.Data.pdb
 D:\RestLearning\RestLearning.Api\bin\EntityFramework.xml
+D:\RestLearning\RestLearning.Api\bin\Toasts.Forms.Plugin.Abstractions.dll
+D:\RestLearning\RestLearning.Api\bin\Toasts.Forms.Plugin.Abstractions.pdb

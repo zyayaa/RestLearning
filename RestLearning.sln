@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
+# Visual Studio 2012
 VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestLearning", "RestLearning\RestLearning.csproj", "{EDBC2EB1-22E1-4203-BD44-27A2052E0F7A}"
@@ -19,18 +19,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{EDBC2EB1-22E1-4203-BD44-27A2052E0F7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EDBC2EB1-22E1-4203-BD44-27A2052E0F7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EDBC2EB1-22E1-4203-BD44-27A2052E0F7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EDBC2EB1-22E1-4203-BD44-27A2052E0F7A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C8B59865-81CB-4A78-ADD4-1F76437E0B00}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C8B59865-81CB-4A78-ADD4-1F76437E0B00}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C8B59865-81CB-4A78-ADD4-1F76437E0B00}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C8B59865-81CB-4A78-ADD4-1F76437E0B00}.Release|Any CPU.Build.0 = Release|Any CPU
 		{588A035D-D91A-4702-9357-874BF6D870DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{588A035D-D91A-4702-9357-874BF6D870DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{588A035D-D91A-4702-9357-874BF6D870DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{588A035D-D91A-4702-9357-874BF6D870DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C8B59865-81CB-4A78-ADD4-1F76437E0B00}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8B59865-81CB-4A78-ADD4-1F76437E0B00}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8B59865-81CB-4A78-ADD4-1F76437E0B00}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8B59865-81CB-4A78-ADD4-1F76437E0B00}.Release|Any CPU.Build.0 = Release|Any CPU
 		{E0B0915A-FD0B-46CC-AE4A-760DBAC49523}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{E0B0915A-FD0B-46CC-AE4A-760DBAC49523}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E0B0915A-FD0B-46CC-AE4A-760DBAC49523}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -39,14 +35,18 @@ Global
 		{EC36432C-DAF9-497F-A2DD-3EFAF50D7758}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EC36432C-DAF9-497F-A2DD-3EFAF50D7758}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EC36432C-DAF9-497F-A2DD-3EFAF50D7758}.Release|Any CPU.Build.0 = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
+		{EDBC2EB1-22E1-4203-BD44-27A2052E0F7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDBC2EB1-22E1-4203-BD44-27A2052E0F7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDBC2EB1-22E1-4203-BD44-27A2052E0F7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDBC2EB1-22E1-4203-BD44-27A2052E0F7A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
 		Policies = $0
 		$0.DotNetNamingPolicy = $1
 		$1.DirectoryNamespaceAssociation = None
 		$1.ResourceNamePolicy = FileFormatDefault
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
 	EndGlobalSection
 EndGlobal

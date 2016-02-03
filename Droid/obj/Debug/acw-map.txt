@@ -2,6 +2,18 @@ RestLearning.Droid.MainActivity, RestLearning.Droid;md553b9c694cf4a02a8052a8a913
 RestLearning.Droid.MainActivity, RestLearning.Droid, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md553b9c694cf4a02a8052a8a913077539e.MainActivity
 RestLearning.Droid.MainActivity;md553b9c694cf4a02a8052a8a913077539e.MainActivity
 restlearning.droid.MainActivity;md553b9c694cf4a02a8052a8a913077539e.MainActivity
+Plugin.Toasts.Crouton, Toasts.Forms.Plugin.Droid;md52d189d64b7b0ac40b59b56928c06114b.Crouton
+Plugin.Toasts.Crouton, Toasts.Forms.Plugin.Droid, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md52d189d64b7b0ac40b59b56928c06114b.Crouton
+Plugin.Toasts.Crouton;md52d189d64b7b0ac40b59b56928c06114b.Crouton
+plugin.toasts.Crouton;md52d189d64b7b0ac40b59b56928c06114b.Crouton
+Plugin.Toasts.Manager, Toasts.Forms.Plugin.Droid;md52d189d64b7b0ac40b59b56928c06114b.Manager
+Plugin.Toasts.Manager, Toasts.Forms.Plugin.Droid, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md52d189d64b7b0ac40b59b56928c06114b.Manager
+Plugin.Toasts.Manager;md52d189d64b7b0ac40b59b56928c06114b.Manager
+plugin.toasts.Manager;md52d189d64b7b0ac40b59b56928c06114b.Manager
+Plugin.Toasts.Manager/GlobalLayoutListener, Toasts.Forms.Plugin.Droid;md52d189d64b7b0ac40b59b56928c06114b.Manager_GlobalLayoutListener
+Plugin.Toasts.Manager+GlobalLayoutListener, Toasts.Forms.Plugin.Droid, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md52d189d64b7b0ac40b59b56928c06114b.Manager_GlobalLayoutListener
+Plugin.Toasts.Manager.GlobalLayoutListener;md52d189d64b7b0ac40b59b56928c06114b.Manager_GlobalLayoutListener
+plugin.toasts.Manager_GlobalLayoutListener;md52d189d64b7b0ac40b59b56928c06114b.Manager_GlobalLayoutListener
 Android.Support.Design.Widget.Snackbar/SnackbarActionClickImplementor, Xamarin.Android.Support.Design;android.support.design.widget.Snackbar_SnackbarActionClickImplementor
 Android.Support.Design.Widget.Snackbar+SnackbarActionClickImplementor, Xamarin.Android.Support.Design, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;android.support.design.widget.Snackbar_SnackbarActionClickImplementor
 Android.Support.Design.Widget.Snackbar.SnackbarActionClickImplementor;android.support.design.widget.Snackbar_SnackbarActionClickImplementor

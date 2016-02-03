@@ -6,6 +6,8 @@ D:\RestLearning\Droid\obj\Debug\assemblies\RestLearning.dll
 D:\RestLearning\Droid\obj\Debug\assemblies\System.Core.dll
 D:\RestLearning\Droid\obj\Debug\assemblies\System.dll
 D:\RestLearning\Droid\obj\Debug\assemblies\System.Xml.dll
+D:\RestLearning\Droid\obj\Debug\assemblies\Toasts.Forms.Plugin.Abstractions.dll
+D:\RestLearning\Droid\obj\Debug\assemblies\Toasts.Forms.Plugin.Droid.dll
 D:\RestLearning\Droid\obj\Debug\assemblies\Xamarin.Android.Support.Design.dll
 D:\RestLearning\Droid\obj\Debug\assemblies\Xamarin.Android.Support.v4.dll
 D:\RestLearning\Droid\obj\Debug\assemblies\Xamarin.Android.Support.v7.AppCompat.dll

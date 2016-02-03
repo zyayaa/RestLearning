@@ -9,6 +9,7 @@ using System.Collections.Generic;
 using Newtonsoft.Json;
 using RestLearning.Dtos;
 using System.Linq;
+using Plugin.Toasts;
 
 namespace RestLearning {
     public class App : Application {
@@ -16,7 +17,7 @@ namespace RestLearning {
 		ListView UsersList;
         public App() {
             // The root page of your application
-            MainPage = new Layouts.Main();
+			MainPage = new Layouts.Main();
             UsersList = MainPage.FindByName<ListView> ("UserList");
 
 			var response = GetValues ();
@@ -24,6 +25,20 @@ namespace RestLearning {
             List<UserDto> users = response.Result;
             UsersList.ItemsSource = from u in users
                                     select u.Name;
+
+			UsersList.ItemSelected += (object sender, SelectedItemChangedEventArgs e) => {
+				string name = (string)e.SelectedItem;
+				if(!string.IsNullOrEmpty(name)){
+				int age = (from u in users
+							  where u.Name == name
+								select u.Age).FirstOrDefault();
+
+                var notificator = DependencyService.Get<IToastNotificator>();
+				notificator.Notify(ToastNotificationType.Info, string.Format("{0}: {1}", name, age.ToString()), null, new TimeSpan(0,0, 3));
+
+				UsersList.SelectedItem = null;
+				}
+			};
         }
 
 		public async Task<List<UserDto>> GetValues ()
