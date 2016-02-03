@@ -4,9 +4,9 @@
              x:Class="RestLearning.Layouts.Main">
 
   <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
-    
+
     <ListView VerticalOptions="CenterAndExpand" x:Name="UserList"/>
-    
+
   </StackLayout>
-  
+
 </ContentPage>

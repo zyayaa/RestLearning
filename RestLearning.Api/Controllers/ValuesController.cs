@@ -5,23 +5,20 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using RestLearning.Dtos;
+using RestLearning.Services;
 
 namespace RestLearning.Api.Controllers {
     public class ValuesController : ApiController {
 
-        private List<UserDto> Users = new List<UserDto> {
-            new UserDto {Name= "Joao" , Age =21 },
-            new UserDto {Name= "Filipe" , Age =22 }
-        };
-
         // GET api/values
         public List<UserDto> Get() {
-            return Users;
+            return UsersService.GetUsers();
         }
 
         // GET api/values/5
-        public UserDto Get(int id) {
-            return new UserDto();
+        public UserDto Get(string id) {
+            Guid userId = Guid.Parse(id);
+            return UsersService.GetUser(userId);
         }
 
         // POST api/values

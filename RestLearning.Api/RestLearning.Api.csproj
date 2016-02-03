@@ -255,6 +255,10 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\RestLearning.Services\RestLearning.Services.csproj">
+      <Project>{ec36432c-daf9-497f-a2dd-3efaf50d7758}</Project>
+      <Name>RestLearning.Services</Name>
+    </ProjectReference>
     <ProjectReference Include="..\RestLearning\RestLearning.csproj">
       <Project>{edbc2eb1-22e1-4203-bd44-27a2052e0f7a}</Project>
       <Name>RestLearning</Name>

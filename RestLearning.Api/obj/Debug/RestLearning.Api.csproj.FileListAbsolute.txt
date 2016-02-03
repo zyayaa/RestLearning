@@ -64,3 +64,9 @@ D:\RestLearning\RestLearning.Api\bin\Xamarin.Forms.Platform.dll
 D:\RestLearning\RestLearning.Api\bin\RestLearning.pdb
 D:\RestLearning\RestLearning.Api\bin\Xamarin.Forms.Core.xml
 D:\RestLearning\RestLearning.Api\bin\Xamarin.Forms.Xaml.xml
+D:\RestLearning\RestLearning.Api\bin\RestLearning.Services.dll
+D:\RestLearning\RestLearning.Api\bin\RestLearning.Data.dll
+D:\RestLearning\RestLearning.Api\bin\EntityFramework.dll
+D:\RestLearning\RestLearning.Api\bin\RestLearning.Services.pdb
+D:\RestLearning\RestLearning.Api\bin\RestLearning.Data.pdb
+D:\RestLearning\RestLearning.Api\bin\EntityFramework.xml
