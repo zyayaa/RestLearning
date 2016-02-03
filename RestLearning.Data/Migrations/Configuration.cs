@@ -19,9 +19,15 @@ namespace RestLearning.Data.Migrations
             context.Database.ExecuteSqlCommand("EXEC sp_MSForEachTable 'ALTER TABLE ? CHECK CONSTRAINT ALL'");
 
             context.Users.Add(new Users {
-                UserID = Guid.NewGuid(),
+                UserID = Guid.Parse("750EFA66-87CD-468E-A02B-065BB0612A04"),
                 Name = "Joao",
                 Age = 21
+            });
+
+            context.Users.Add(new Users {
+                UserID = Guid.Parse("CA0987CD-D8FF-4398-8662-1CE251DE3ED0"),
+                Name = "Filipe",
+                Age = 22
             });
         }
     }

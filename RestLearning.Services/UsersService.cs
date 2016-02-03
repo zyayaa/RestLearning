@@ -11,10 +11,8 @@ namespace RestLearning.Services {
     public class UsersService {
 
         public static UserDto GetUser(Guid UserId) {
-            using(var context = new UsersContext()) {
-                var user = (from u in context.Users
-                            where u.UserID == UserId
-                            select u).FirstOrDefault();
+            using(var uow = new UnitOfWork()) {
+                var user = uow.UsersRepository.GetUser(UserId);
 
                 if(user != null) {
                     return MapUsersToDto(user);
@@ -26,9 +24,8 @@ namespace RestLearning.Services {
              
 
         public static List<UserDto> GetUsers() {
-            using(var context = new UsersContext()) {
-                var users = (from u in context.Users
-                             select u).ToList();
+            using(var uow = new UnitOfWork()) {
+                var users = uow.UsersRepository.GetUsers();
 
                 return MapUsersToDto(users);
             }
