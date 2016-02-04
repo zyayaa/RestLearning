@@ -72,3 +72,6 @@ D:\RestLearning\RestLearning.Api\bin\RestLearning.Data.pdb
 D:\RestLearning\RestLearning.Api\bin\EntityFramework.xml
 D:\RestLearning\RestLearning.Api\bin\Toasts.Forms.Plugin.Abstractions.dll
 D:\RestLearning\RestLearning.Api\bin\Toasts.Forms.Plugin.Abstractions.pdb
+D:\RestLearning\RestLearning.Api\bin\System.Web.Cors.dll
+D:\RestLearning\RestLearning.Api\bin\System.Web.Http.Cors.dll
+D:\RestLearning\RestLearning.Api\bin\System.Web.Http.Cors.xml

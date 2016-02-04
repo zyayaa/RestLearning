@@ -21,6 +21,7 @@ D:\RestLearning\RestLearning\obj\Debug\RestLearning.pdb
 D:\RestLearning\RestLearning\obj\Debug\RestLearning.csprojResolveAssemblyReference.cache
 D:\RestLearning\RestLearning\bin\Debug\Toasts.Forms.Plugin.Abstractions.dll
 D:\RestLearning\RestLearning\bin\Debug\Toasts.Forms.Plugin.Abstractions.pdb
+D:\RestLearning\RestLearning\obj\Debug\RestLearning.Layouts.UpdateUser.xaml.g.cs
 D:\RestLearning\RestLearning\obj\Debug\RestLearning.dll.mdb
 D:\RestLearning\RestLearning\bin\Debug\RestLearning.dll.mdb
 D:\RestLearning\RestLearning\obj\Debug\RestLearning.dll.mdb

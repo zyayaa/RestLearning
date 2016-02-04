@@ -12,32 +12,40 @@ namespace RestLearning.Api.Controllers {
 
         // GET values
         [Route("values")]
+        [HttpGet]
         public List<UserDto> Get() {
-            return UsersService.GetUsers();
+           var result = UsersService.GetUsers();
+
+            return result;
         }
 
         // GET values/5
-        [Route("values/{id}")]
-        public UserDto Get(string id) {
-            Guid userId = Guid.Parse(id);
-            return UsersService.GetUser(userId);
+        [Route("values/{userId}")]
+        [HttpGet]
+        public UserDto Get(string userId) {
+            Guid userGuid = Guid.Parse(userId);
+            return UsersService.GetUser(userGuid);
         }
 
-        [Route("values/new")]
-        // POST values
-        public void Post([FromBody]UserDto user) {
-            if(user != null) {
+        [Route("values/{userId}/new")]
+        [HttpPost]
+        public void Post(string userId, [FromBody]UserDto user) {
+            Guid userGuid;
+
+            if(user != null && Guid.TryParse(userId, out userGuid)) {
                 UsersService.CreateUser(user);
             }
         }
 
-        [Route("values/{id}")]
-        public void Put(string userId, [FromBody]UserDto user) {
+        [Route("values/{userId}")]
+        [HttpPut]
+        public void Put(string userId, [FromBody] UserDto user) {
 
-        }
+            Guid userGuid;
 
-        // DELETE api/values/5
-        public void Delete(int id) {
+            if(user != null && Guid.TryParse(userId, out userGuid)) {
+                UsersService.UpdateUser(user);
+            }
         }
     }
 }

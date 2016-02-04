@@ -21,7 +21,7 @@ namespace RestLearning.Services {
                 return null;
             }
         }
-             
+
 
         public static List<UserDto> GetUsers() {
             using(var uow = new UnitOfWork()) {
@@ -31,21 +31,29 @@ namespace RestLearning.Services {
             }
         }
 
-        public static void CreateUser(UserDto user) {
+        public static void CreateUser(UserDto userDto) {
             using(var uow = new UnitOfWork()) {
-                var userDe = MapUserToDe(user);
+                var userDe = new Users();
+                MapUserToDe(userDto,userDe);
+                userDe.AddedOn = DateTime.Now;
                 uow.UsersRepository.Insert(userDe);
                 uow.Save();
             }
         }
 
-        private static Users MapUserToDe(UserDto user) {
-            return new Users {
-                UserID = user.UserId,
-                Name = user.Name,
-                Age= user.Age,
-                AddedOn = user.AddedOn                
-            };
+        private static void MapUserToDe(UserDto userDto, Users userDe) {
+            userDe.UserID = userDto.UserId;
+            userDe.Name = userDto.Name;
+            userDe.Age = userDto.Age;
+        }
+
+        public static void UpdateUser(UserDto userDto) {
+            using(var uow = new UnitOfWork()) {
+                var userDe = uow.UsersRepository.GetUser(userDto.UserId);
+                userDe.Name = userDto.Name;
+                userDe.Age = userDto.Age;
+                uow.Save();
+            }
         }
 
         /// <summary>
@@ -55,7 +63,7 @@ namespace RestLearning.Services {
         /// <returns></returns>
         private static UserDto MapUsersToDto(Users user) {
             return new UserDto {
-				UserId = user.UserID,
+                UserId = user.UserID,
                 Age = user.Age,
                 Name = user.Name,
                 AddedOn = user.AddedOn

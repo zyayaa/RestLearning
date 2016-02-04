@@ -11,6 +11,8 @@ using RestLearning.Dtos;
 using System.Linq;
 using Plugin.Toasts;
 using System.Text;
+using System.Collections.ObjectModel;
+using RestLearning.Layouts;
 
 namespace RestLearning {
     public class App : Application {
@@ -20,45 +22,56 @@ namespace RestLearning {
 		Entry Name;
 		Entry Age;
 		IToastNotificator notificator;
-		List<UserDto> users;
+		ObservableCollection<UserDto> users;
+
         public App() {
             // The root page of your application
-			MainPage = new Layouts.Main();
-            UsersList = MainPage.FindByName<ListView> ("UserList");
+			InitializeMainPage ();
+		}
+
+		void InitializeMainPage ()
+		{
+			MainPage = new Main ();
+			UsersList = MainPage.FindByName<ListView> ("UserList");
 			Add = MainPage.FindByName<Button> ("btn_add");
 			Name = MainPage.FindByName<Entry> ("txt_name");
 			Age = MainPage.FindByName<Entry> ("txt_age");
-			users = new List<UserDto> ();
-
+			users = new ObservableCollection<UserDto> ();
 			PopulateGrid ();
-
-			Add.Clicked += OnAddClick;	
+			Add.Clicked += OnAddClick;
 		}
 
 		void OnAddClick(object sender, EventArgs e){
+			UserDto user = new UserDto();
 			int age;
+
+			bool valid = ValidateUser (Name.Text, Age.Text, out age);
+			if (valid) {
+				user.UserId = Guid.NewGuid();
+				user.Name = Name.Text;
+				user.Age = age;
+				AddUser (user);
+			}
+		}
+
+		private bool ValidateUser (string name, string ageString, out int age)
+		{
+			age = 0;
 			notificator = DependencyService.Get<IToastNotificator> ();
-			if(string.IsNullOrEmpty(Name.Text))
-			{					
-				notificator.Notify(ToastNotificationType.Error, "Name must be provided", null, new TimeSpan(0,0,3));
+			if (string.IsNullOrEmpty (name)) {
+				return false;
+				notificator.Notify (ToastNotificationType.Error, "Name must be provided", null, new TimeSpan (0, 0, 3));
 			}
-			else if(string.IsNullOrEmpty(Age.Text))
-			{					
-				notificator.Notify(ToastNotificationType.Error, "Age must be provided", null, new TimeSpan(0,0,3));
+			else if (string.IsNullOrEmpty (ageString)) {
+				notificator.Notify (ToastNotificationType.Error, "Age must be provided", null, new TimeSpan (0, 0, 3));
+				return false;
 			}
-			else if(!int.TryParse(Age.Text, out age))
-			{
-				notificator.Notify(ToastNotificationType.Error, "Age must be integer", null, new TimeSpan(0,0,3));
+			else if (!int.TryParse (ageString, out age)) {
+				notificator.Notify (ToastNotificationType.Error, "Age must be integer", null, new TimeSpan (0, 0, 3));
+				return false;
 			}
-			else
-			{
-				var user = new UserDto{
-					UserId = Guid.NewGuid(),
-					Name=Name.Text,
-					Age = age,
-					AddedOn = DateTime.Now
-				};
-				AddUser(user);
+			else {
+				return true;
 			}
 		}
 			
@@ -70,11 +83,13 @@ namespace RestLearning {
 
 			var content = new StringContent (json, Encoding.UTF8, "application/json");
 
-			HttpResponseMessage response = null;
-				response = await httpClient.PostAsync (string.Format ("values/new"), content);
-				PopulateGrid ();
-				notificator = DependencyService.Get<IToastNotificator> ();
-				notificator.Notify(ToastNotificationType.Info, "User added", null, new TimeSpan(0,0,3));
+				HttpResponseMessage response = null;
+				response = await httpClient.PostAsync (string.Format("values/{0}/new", user.UserId), content);
+				if (response != null && response.IsSuccessStatusCode) {
+					PopulateGrid ();
+					notificator = DependencyService.Get<IToastNotificator> ();
+					await notificator.Notify (ToastNotificationType.Info, "User added", null, new TimeSpan (0, 0, 3));
+				}
 			}
 		}
 
@@ -82,29 +97,57 @@ namespace RestLearning {
 		{
 			var response = GetUsers ();
 			users = response.Result;
-			UsersList.ItemsSource = from u in users
-									select u.Name;
+			UsersList.ItemsSource = users;
+			
 			UsersList.ItemSelected += (object sender, SelectedItemChangedEventArgs e) =>  {
-				string name = (string)e.SelectedItem;
-				if (!string.IsNullOrEmpty (name)) {
-					
-					int age = (from u in users
-					where u.Name == name
-					select u.Age).FirstOrDefault ();
-					notificator = DependencyService.Get<IToastNotificator> ();
-					notificator.Notify (ToastNotificationType.Info, string.Format ("{0}: {1}", name, age.ToString ()), null, new TimeSpan (0, 0, 3));
-					UsersList.SelectedItem = null;
+				UserDto user = (UserDto)e.SelectedItem;
+				if(user != null){						
+					MainPage = new UpdateUser(user);
+					Button update = MainPage.FindByName<Button>("btn_update");
+					update.Clicked += OnUpdateClick;
 				}
 			};
 		}
 
-		public async Task<List<UserDto>> GetUsers ()
+		private void OnUpdateClick (object sender, EventArgs e)
+		{
+			UserDto user = ((UpdateUser)MainPage).user;
+			string Name = MainPage.FindByName<Entry>("txt_updateName").Text;
+			string Age =MainPage.FindByName<Entry>("txt_updateAge").Text;
+			int age = 0;
+			bool valid = ValidateUser (Name, Age, out age);
+
+			if (valid) {
+				user.Name = Name;
+				user.Age = age;
+				UpdateUserRequest (user);
+			}
+		}
+
+		public async Task UpdateUserRequest(UserDto user)
+		{
+			using (var httpClient = CreateClient ()) {
+				var json = JsonConvert.SerializeObject (user);
+
+				var content = new StringContent (json, Encoding.UTF8, "application/json");
+
+				HttpResponseMessage response = null;
+				response = await httpClient.PutAsync (string.Format("values/{0}", user.UserId), content);
+				if (response != null && response.IsSuccessStatusCode) {
+					notificator = DependencyService.Get<IToastNotificator> ();
+					notificator.Notify(ToastNotificationType.Info, "User updated", null, new TimeSpan(0,0,3));
+					InitializeMainPage ();
+				}
+			}
+		}
+
+		public async Task<ObservableCollection<UserDto>> GetUsers ()
 		{
 			using (var httpClient = CreateClient ()) {
 				var response = await httpClient.GetAsync ("values").ConfigureAwait(false);
 				if (response.IsSuccessStatusCode) {
 					var json = await response.Content.ReadAsStringAsync ().ConfigureAwait(false);
-					return JsonConvert.DeserializeObject<List<UserDto>>(json);
+					return JsonConvert.DeserializeObject<ObservableCollection<UserDto>>(json);
 				}
 			}
 			return null;

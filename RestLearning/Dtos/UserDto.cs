@@ -10,7 +10,7 @@ namespace RestLearning.Dtos {
     [DataContract(Name = "user")]
     public class UserDto {
 		[DataMember(Name="userId")]
-		public Guid UserId;
+		public Guid UserId{ get; set; }
 
         [DataMember(Name = "name")]
         public string Name { get; set; }

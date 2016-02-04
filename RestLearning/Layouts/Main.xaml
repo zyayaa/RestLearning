@@ -5,7 +5,13 @@
 
   <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
 
-    <ListView VerticalOptions="CenterAndExpand" x:Name="UserList"/>
+    <ListView x:Name="UserList">
+	    <ListView.ItemTemplate>
+	      <DataTemplate>
+	        <TextCell Text="{Binding Name}" />
+	      </DataTemplate>
+	    </ListView.ItemTemplate>
+  	</ListView>
 
     <Entry x:Name="txt_name" Placeholder = "Name"/>
     <Entry x:Name="txt_age" Placeholder="Age" Keyboard="Numeric"/>

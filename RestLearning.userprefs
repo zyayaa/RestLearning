@@ -1,10 +1,11 @@
 ﻿<Properties StartupItem="Droid\RestLearning.Droid.csproj" RefactoringSettings.EnableRefactorings="True">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.192.168.1.5:5555" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.192.168.1.2:5555" />
   <MonoDevelop.Ide.Workbench ActiveDocument="RestLearning\RestLearning.cs">
     <Files>
-      <File FileName="RestLearning\RestLearning.cs" Line="59" Column="28" />
-      <File FileName="RestLearning\Layouts\Main.xaml" Line="13" Column="95" />
-      <File FileName="RestLearning\Dtos\UserDto.cs" Line="22" Column="39" />
+      <File FileName="RestLearning\RestLearning.cs" Line="139" Column="28" />
+      <File FileName="RestLearning\Layouts\UpdateUser.xaml" Line="7" Column="16" />
+      <File FileName="RestLearning\Layouts\Main.xaml" Line="21" Column="3" />
+      <File FileName="RestLearning\Layouts\UpdateUser.xaml.cs" Line="17" Column="71" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
